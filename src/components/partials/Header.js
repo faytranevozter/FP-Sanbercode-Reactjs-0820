@@ -1,0 +1,60 @@
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { UserContext } from '../../contexts/UserContext';
+import { Col, Layout, Menu, Row } from 'antd';
+import {
+  HomeOutlined,
+  VideoCameraOutlined,
+  CustomerServiceOutlined
+} from '@ant-design/icons';
+
+const Header = (props) => {
+  const [, setUser] = useContext(UserContext)
+  return (
+    <Layout.Header className={`header ${(!props.isLogin ? '' : 'w-no-sidebar')}`}>
+      <Row justify="space-between">
+        <Col span={12}>
+          <Menu theme={props.theme} mode="horizontal" defaultSelectedKeys={['4']}>
+            <Menu.Item icon={<HomeOutlined />}>
+              <Link to="/">Home</Link>
+            </Menu.Item>
+            {
+              props.isLogin && (
+                <>
+                  <Menu.Item icon={<VideoCameraOutlined />}>
+                    <Link to="/movies-editor">Movies Editor</Link>
+                  </Menu.Item>
+                  <Menu.Item icon={<CustomerServiceOutlined />}>
+                    <Link to="/games-editor">Games Editor</Link>
+                  </Menu.Item>
+                </>
+              )
+            }
+          </Menu>
+        </Col>
+        <Col>
+          <Menu theme={props.theme} mode="horizontal" defaultSelectedKeys={['4']}>
+            {
+              !props.isLogin ? (
+                <>
+                  <Menu.Item>
+                    <Link to="/login" onClick={()=>setUser({id:1})}>Login</Link>
+                  </Menu.Item>
+                  <Menu.Item>
+                    <Link to="/register">Register</Link>
+                  </Menu.Item>
+                </>
+              ) : (
+                <Menu.Item>
+                  <Link to="/logout" onClick={()=>setUser(null)}>Logout</Link>
+                </Menu.Item>
+              )
+            }
+          </Menu>
+        </Col>
+      </Row>
+    </Layout.Header>
+  );
+};
+
+export default Header;
