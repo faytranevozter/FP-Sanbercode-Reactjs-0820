@@ -22,10 +22,10 @@ const Header = (props) => {
               props.isLogin && (
                 <>
                   <Menu.Item icon={<VideoCameraOutlined />}>
-                    <Link to="/movies-editor">Movies Editor</Link>
+                    <Link to="/movie-editor/list">Movies Editor</Link>
                   </Menu.Item>
                   <Menu.Item icon={<CustomerServiceOutlined />}>
-                    <Link to="/games-editor">Games Editor</Link>
+                    <Link to="/games-editor/list">Games Editor</Link>
                   </Menu.Item>
                 </>
               )

@@ -7,6 +7,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import MovieCreate from './pages/MovieCreate';
 import MovieList from './pages/MovieList';
+import MovieReviewDetail from './pages/MovieReviewDetail';
 
 const Routes = (props) => {
   const PrivateRoute = (xprops) => {
@@ -28,6 +29,7 @@ const Routes = (props) => {
   return (
     <Switch>
       <Route exact path="/" component={Home} />
+      <Route exact path="/movies/:id" component={MovieReviewDetail} />
       <GuestRoute path="/login" component={Login} />
       <GuestRoute path="/register" component={Register} />
       <PrivateRoute path="/movie-editor/list" component={MovieList} />
