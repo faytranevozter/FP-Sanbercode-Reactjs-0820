@@ -38,7 +38,7 @@ const Header = (props) => {
               !props.isLogin ? (
                 <>
                   <Menu.Item>
-                    <Link to="/login" onClick={()=>setUser({id:1})}>Login</Link>
+                    <Link to="/login">Login</Link>
                   </Menu.Item>
                   <Menu.Item>
                     <Link to="/register">Register</Link>

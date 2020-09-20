@@ -23,7 +23,7 @@ const Main = () => {
         <Header theme={themeColor} isLogin={isLogin} />
         <Layout.Content className="content-hell-yeah">
           <div className="real-content">
-            <Routes />
+            <Routes isLogin={isLogin} />
           </div>
         </Layout.Content>
         <Footer />
