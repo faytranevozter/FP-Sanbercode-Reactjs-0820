@@ -11,6 +11,7 @@ import MovieReviewDetail from './pages/MovieReviewDetail';
 import MovieEdit from './pages/MovieEdit';
 import GameList from './pages/GameList';
 import ChangePassword from './pages/ChangePassword';
+import GameCreate from './pages/GameCreate';
 
 const Routes = (props) => {
   const PrivateRoute = (xprops) => {
@@ -41,7 +42,7 @@ const Routes = (props) => {
         <Route path="/movie-editor/create" component={()=><MovieCreate user={props.user} />} />
         <Route path="/game-editor/list" component={()=><GameList user={props.user} />} />
         {/* <Route path="/game-editor/edit/:id" component={()=><GameEdit user={props.user} />} /> */}
-        {/* <Route path="/game-editor/create" component={()=><GameCreate user={props.user} />} /> */}
+        <Route path="/game-editor/create" component={()=><GameCreate user={props.user} />} />
         <Route path="/change-password" component={()=><ChangePassword user={props.user} />} />
       </PrivateRoute>
     </Switch>
