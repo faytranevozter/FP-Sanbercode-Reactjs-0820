@@ -20,7 +20,7 @@ const Home = () => {
     if (dataMovies === null) {
       fetchData();
     }
-  }, [dataMovies, setLoading]);
+  }, [dataMovies]);
 
   return (
     <>
