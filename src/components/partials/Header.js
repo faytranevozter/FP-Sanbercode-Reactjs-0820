@@ -25,7 +25,7 @@ const Header = (props) => {
                     <Link to="/movie-editor/list">Movies Editor</Link>
                   </Menu.Item>
                   <Menu.Item icon={<CustomerServiceOutlined />}>
-                    <Link to="/games-editor/list">Games Editor</Link>
+                    <Link to="/game-editor/list">Games Editor</Link>
                   </Menu.Item>
                 </>
               )

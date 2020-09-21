@@ -26,17 +26,17 @@ const Sidebar = (props) => {
         </SubMenu>
         <SubMenu title="Games Editor" icon={<CustomerServiceOutlined />}>
           <Menu.Item key="list-game">
-            List
+            <Link to="/game-editor/list">List</Link>
           </Menu.Item>
           <Menu.Item key="create-game">
-            Create
+            <Link to="/movie-editor/create">Create</Link>
           </Menu.Item>
         </SubMenu>
         <Menu.Item key="change-password" icon={<LockOutlined />}>
-          Change Password
+          <Link to="/change-password">Change Password</Link>
         </Menu.Item>
         <Menu.Item key="switch-theme" icon={<BulbOutlined />}>
-          Change Theme
+          <Link to="/change-theme">Change Theme</Link>
         </Menu.Item>
       </Menu>
     </Layout.Sider>
