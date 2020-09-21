@@ -1,5 +1,3 @@
-@import '~antd/dist/antd.css';
-
 .h-100 {
   height: 100%;
 }
@@ -16,7 +14,7 @@
 }
 
 .content-hell-yeah .real-content {
-  background-color: #fff;
+  background-color: #141414;
   height: 100%;
   overflow-y: scroll;
   padding: 10px;
@@ -31,4 +29,11 @@
 
 .w-no-sidebar {
   width: calc(100vw - 200px);
+}
+
+section.light .logo {
+  background: rgba(168, 168, 168, 0.2);
+}
+section.light .real-content {
+  background-color: #fff;
 }

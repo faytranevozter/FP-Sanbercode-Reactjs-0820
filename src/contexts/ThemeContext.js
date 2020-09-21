@@ -6,7 +6,10 @@ export const ThemeProvider = ({children}) => {
   const [theme, setThemex] = useState(null);
 
   const setTheme = (value) => {
-    localStorage.setItem('theme', value);
+    localStorage.setItem('theme', JSON.stringify(value));
+    const link = document.getElementById('theme-style')
+    link.href = link.href.replace(theme.color, value.color)
+
     setThemex(value);
   };
   
@@ -16,9 +19,10 @@ export const ThemeProvider = ({children}) => {
       if (themeLS === null) {
         themeLS = JSON.stringify({
           color: 'dark',
-          sidebarCollapse: false,
         });
       }
+      const link = document.getElementById('theme-style')
+      link.href = link.href.replace('dark', JSON.parse(themeLS).color)
       setThemex(JSON.parse(themeLS));
     }
   }, [theme]);

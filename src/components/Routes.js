@@ -13,6 +13,7 @@ import GameList from './pages/GameList';
 import ChangePassword from './pages/ChangePassword';
 import GameCreate from './pages/GameCreate';
 import GameEdit from './pages/GameEdit';
+import ChangeTheme from './pages/ChangeTheme';
 
 const Routes = (props) => {
   const PrivateRoute = (xprops) => {
@@ -45,6 +46,7 @@ const Routes = (props) => {
         <Route path="/game-editor/edit/:id" component={()=><GameEdit user={props.user} />} />
         <Route path="/game-editor/create" component={()=><GameCreate user={props.user} />} />
         <Route path="/change-password" component={()=><ChangePassword user={props.user} />} />
+        <Route path="/change-theme" component={()=><ChangeTheme theme={props.theme} user={props.user} />} />
       </PrivateRoute>
     </Switch>
   );

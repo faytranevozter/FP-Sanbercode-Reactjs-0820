@@ -11,10 +11,8 @@ import { Link } from 'react-router-dom';
 
 const Sidebar = (props) => {
   return (
-    <Layout.Sider onCollapse={(collapsed, type) => { console.log(collapsed, type); }}>
-      <div className="logo">
-        Haha
-      </div>
+    <Layout.Sider theme={props.theme} onCollapse={(collapsed, type) => { console.log(collapsed, type); }}>
+      <div className="logo" />
       <Menu theme={props.theme} mode="inline">
         <SubMenu title="Movie Editor" icon={<VideoCameraOutlined />}>
           <Menu.Item key="list-movie" to="/movie-editor/list">

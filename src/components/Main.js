@@ -17,13 +17,13 @@ const Main = () => {
   const isLogin = user || false
 
   return (
-    <Layout style={{height: '100vh'}} hasSider={isLogin}>
+    <Layout style={{height: '100vh'}} hasSider={isLogin} className={themeColor}>
       { isLogin && <Sidebar theme={themeColor} /> }
       <Layout>
         <Header theme={themeColor} isLogin={isLogin} />
         <Layout.Content className="content-hell-yeah">
           <div className="real-content">
-            <Routes isLogin={isLogin} user={(user ? user : null)} />
+            <Routes isLogin={isLogin} user={(user ? user : null)} theme={themeColor} />
           </div>
         </Layout.Content>
         <Footer />

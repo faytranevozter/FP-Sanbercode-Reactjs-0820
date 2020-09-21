@@ -13,7 +13,7 @@ const ChangePassword = (props) => {
     try {
       setErrMessage([])
       setSuccessMessage([])
-      const res = await axios.post('https://backendexample.sanbersy.com/api/change-password', {
+      await axios.post('https://backendexample.sanbersy.com/api/change-password', {
         current_password: values.current_password,
         new_password: values.new_password,
         new_confirm_password: values.new_confirm_password,

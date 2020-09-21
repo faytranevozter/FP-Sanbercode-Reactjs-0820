@@ -11,7 +11,7 @@ import {
 const Header = (props) => {
   const [, setUser] = useContext(UserContext)
   return (
-    <Layout.Header className={`header ${(!props.isLogin ? '' : 'w-no-sidebar')}`}>
+    <Layout.Header className={`header ${(!props.isLogin ? '' : 'w-no-sidebar')}`} theme={props.theme}>
       <Row justify="space-between">
         <Col span={12}>
           <Menu theme={props.theme} mode="horizontal" defaultSelectedKeys={['4']}>
